@@ -1,0 +1,2 @@
+onSwingCoolDown = false;
+

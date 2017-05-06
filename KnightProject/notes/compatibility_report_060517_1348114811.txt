@@ -1,0 +1,38 @@
+Converting GML script : ${project_dir}\scripts\ScreenBullshit\ScreenBullshit.gml
+Converted builtin : line 13 : view_wview = ScreenWidth -> __view_set( e__VW.WView, 0, ScreenWidth )
+Converted builtin : line 14 : view_hview = ScreenHeight -> __view_set( e__VW.HView, 0, ScreenHeight )
+Converted builtin : line 17 : view_wport = ScreenWidth -> __view_set( e__VW.WPort, 0, ScreenWidth )
+Converted builtin : line 18 : view_hport = ScreenHeight -> __view_set( e__VW.HPort, 0, ScreenHeight )
+
+Font fGame has been converted to font family Arial (Regular). Font has been regenerated, small inconsistencies may occur.
+Converting GML script : ${project_dir}\objects\oGame\Step_0.gml
+Converted builtin : line 3 : view_wview = ScreenWidth -> __view_set( e__VW.WView, 0, ScreenWidth )
+Converted builtin : line 7 : view_wview = ScreenWidth*1.5 -> __view_set( e__VW.WView, 0, ScreenWidth*1.5 )
+Converted builtin : line 4 : view_hview = ScreenHeight -> __view_set( e__VW.HView, 0, ScreenHeight )
+Converted builtin : line 8 : view_hview = ScreenHeight*1.5 -> __view_set( e__VW.HView, 0, ScreenHeight*1.5 )
+
+Converting GML script : ${project_dir}\objects\oPlayer\Step_0.gml
+Converted string : line 4 : 'W' -> "W"
+Converted string : line 6 : 'S' -> "S"
+Converted string : line 8 : 'A' -> "A"
+Converted string : line 10 : 'D' -> "D"
+
+Converting GML script : ${project_dir}\objects\oPlayerLegs\Step_0.gml
+Converted string : line 4 : 'W' -> "W"
+Converted string : line 7 : 'S' -> "S"
+Converted string : line 10 : 'A' -> "A"
+Converted string : line 13 : 'D' -> "D"
+
+macOS icon ${options_dir}\mac\icons\icon512.png written out as 32-bit.
+game speed set to 60
+added compatibility script action/action_end_game.gml
+added compatibility script action/action_set_cursor.gml
+added compatibility script instance/instance_create.gml
+added compatibility script object/object_get_depth.gml
+added compatibility script view/__view_set.gml
+added compatibility script view/__view_set_internal.gml
+added compatibility script action/__init_action.gml
+added compatibility script view/__init_view.gml
+added compatibility script __init_global.gml
+added compatibility script view/__view_get.gml
+added compatibility script __global_object_depths.gml

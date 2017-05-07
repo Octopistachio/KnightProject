@@ -11,6 +11,8 @@ if (mouse_check_button_pressed(mb_left) && !onSwingCoolDown){
         side = left;
     wasClicked = true;
     audio_play_sound(aSwordSwingMiss,1,false)
+	onSwingCoolDown = true;
+	alarm[0] = swingCoolDownTime;
 }
 
 //Keep swinging left/right until desired angle is hit

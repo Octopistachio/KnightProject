@@ -1,14 +1,17 @@
 //Controls
 image_angle = point_direction(x,y,mouse_x,mouse_y);
 
+vspeed=0;
+hspeed=0;
+
 if keyboard_check(ord("W"))
-    y -= moveSpeed;
+    vspeed = -moveSpeed;
 if keyboard_check(ord("S"))
-    y += moveSpeed;
+    vspeed = moveSpeed;
 if keyboard_check(ord("A"))
-    x -= moveSpeed;
+    hspeed = -moveSpeed;
 if keyboard_check(ord("D"))
-    x += moveSpeed;
+    hspeed = moveSpeed;
 
 //Outside Border
 if(x <= 0 + roomBorderX)
@@ -21,12 +24,17 @@ if(y >= room_height - roomBorderY)
     y -= moveSpeed;
     
 //Inside Castle
-if(x > oCastleWallBottomLeft.x &&
+
+if(instance_exists(oCastleWallBottomLeft) && instance_exists(oCastleWallTopRight))
+{
+	if(x > oCastleWallBottomLeft.x &&
     y < oCastleWallBottomLeft.y &&
     x < oCastleWallTopRight.x &&
     y > oCastleWallTopRight.y)
-    global.playerInsideCastle = true;
-else
-    global.playerInsideCastle = false;
+		global.playerInsideCastle = true;
+	else
+		global.playerInsideCastle = false;
+}
+
     
 

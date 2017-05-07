@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "6a29050a-11e1-4606-a440-2864b93757bc",
+            "Value": {
+                "id": "b7cf9639-3c58-4d3d-b330-c81089febca0",
+                "resourcePath": "scripts\\PlayerCollision\\PlayerCollision.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6bf1a42b-ca3f-4a72-9556-a47e6450d399",
             "Value": {
                 "id": "a3a4d772-6bcd-4e7a-8c31-758ad3d34898",
@@ -620,7 +628,8 @@
         "7f8998f0-6532-4846-a841-3590edf85036",
         "a8137e97-71c1-4a9d-8aaf-43078c790449",
         "eabe974b-6d96-4410-83c8-d7d61d0abbda",
-        "7bc099dd-8609-41a6-967b-c2514aeeb0bd"
+        "7bc099dd-8609-41a6-967b-c2514aeeb0bd",
+        "6a29050a-11e1-4606-a440-2864b93757bc"
     ],
     "tutorial": ""
 }

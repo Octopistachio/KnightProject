@@ -5,6 +5,9 @@ y = oPlayer.y;
 //Swing left or right if lmouse is clicked
 if (mouse_check_button_pressed(mb_left) && !onSwingCoolDown){
 
+	lastMouse_x = mouse_x;
+	lastMouse_y = mouse_y;
+
     if(side == left)
         side = right;
     else
@@ -35,5 +38,13 @@ if(sideStep==left || sideStep==right){
 }
 
 //Image angle is where player is facing + the left or right swing angle
-image_angle = point_direction(x,y,mouse_x,mouse_y) + sideStep;
+if(wasClicked)
+{
+	image_angle = point_direction(x,y,lastMouse_x,lastMouse_y) + sideStep;
+}
+else
+{
+	image_angle = point_direction(x,y,mouse_x,mouse_y) + sideStep;
+}
+
 

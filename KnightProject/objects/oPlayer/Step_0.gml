@@ -15,13 +15,13 @@ if keyboard_check(ord("D"))
 
 //Outside Border
 if(x <= 0 + roomBorderX)
-    x += moveSpeed;
+    hspeed = moveSpeed;
 if(x >= room_width - roomBorderX)
-    x -= moveSpeed;
+    hspeed = -moveSpeed;
 if(y <= 0 + roomBorderY)
-    y += moveSpeed;
+    hspeed = moveSpeed;
 if(y >= room_height - roomBorderY)
-    y -= moveSpeed;
+    hspeed = -moveSpeed;
     
 //Inside Castle
 
@@ -36,5 +36,29 @@ if(instance_exists(oCastleWallBottomLeft) && instance_exists(oCastleWallTopRight
 		global.playerInsideCastle = false;
 }
 
-    
+/* Player Camera */
+if(global.playerInsideCastle)
+{
+	//Move the zoom level based on mouse scrolling. Clamp the value so stuff doesn't get too silly.
+	zoom_level = 1;
+
+}
+else
+{
+	//Move the zoom level based on mouse scrolling. Clamp the value so stuff doesn't get too silly.
+	zoom_level = 1.5;
+
+}
+	
+
+//Get current size
+view_w = camera_get_view_width(view_camera[0]);
+view_h = camera_get_view_height(view_camera[0]);
+
+//Get new sizes by interpolating current and target zoomed size
+new_w = lerp(view_w, zoom_level * default_zoom_width, rate);
+new_h = lerp(view_h, zoom_level * default_zoom_height, rate);
+
+//Apply the new size
+camera_set_view_size(view_camera[0], new_w, new_h);
 

@@ -423,14 +423,6 @@
             }
         },
         {
-            "Key": "c43fee71-4a90-4483-8a89-f79bbfdbc392",
-            "Value": {
-                "id": "a2211a1e-f009-4904-b2fe-7dd0f20336f9",
-                "resourcePath": "objects\\oCursor\\oCursor.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c536cbcc-6bda-4c04-ade8-a8caeeba17fe",
             "Value": {
                 "id": "1ea9678c-3e7b-4a44-8d32-cd0a219aa9e9",

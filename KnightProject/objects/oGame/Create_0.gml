@@ -3,8 +3,6 @@ audio_play_sound(aBackgroundMusic,1,true);
 
 window_set_cursor(cr_none);
 
-//instance_create(0,0,oCursor); //Spawn the cursor
-
 /* Layers */
 layer_create(-999, "GUI");
 layer_create(999, "Background");
@@ -39,4 +37,5 @@ for(i = 0; i < numberOfCastleTiles; i++) //Top Right to Bottom Right
 for(i = 0; i < numberOfCastleTiles; i++) //Top Left to Bottom Left
 	instance_create(oCastleWallBottomLeft.x, oCastleWallTopRight.y + castleTileSize * i, oCastleWall);
 	
+//Spawn player in the center of the castle
 instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2) + castleTileSize/2, oCastleWallTopRight.y + (castleTileSize * numberOfCastleTiles/2) - castleTileSize/2, oPlayer);

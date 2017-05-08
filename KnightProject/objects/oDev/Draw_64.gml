@@ -17,15 +17,3 @@ if(keyboard_check(ord("P")))
 		
     draw_text(64,64+margin*3,string_hash_to_newline("Player's Coordinates: (" + string(round(oPlayer.x)) + ", " + string(round(oPlayer.y))) + ")");
 }
-
-
-
-if(keyboard_check_pressed(ord("B")))
-{
-	global.time = 0;
-}
-
-if(keyboard_check_pressed(ord("N")))
-{
-	global.time = global.dayEnd;
-}

@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "8a5c7ff0-eee6-4a6f-858c-2a47189604aa",
+            "Value": {
+                "id": "61a65f1e-276c-4538-8b11-6708dab44ed4",
+                "resourcePath": "objects\\oTreeTop\\oTreeTop.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90678466-5835-465c-a8eb-921253ed0e09",
             "Value": {
                 "id": "b1e711b5-ffbb-45fb-b720-0e78958613ee",
@@ -383,6 +391,14 @@
             }
         },
         {
+            "Key": "aa688552-a95d-4250-a173-0ea02d4af726",
+            "Value": {
+                "id": "378e5dbb-e73a-4df6-866f-dca1727bf1e4",
+                "resourcePath": "objects\\oTreeTrunk\\oTreeTrunk.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ac874377-49af-4229-ae6a-d50c4afa28d2",
             "Value": {
                 "id": "19d63961-1d71-48ea-a744-dd955035cd48",
@@ -436,6 +452,22 @@
                 "id": "f18169a3-eb4c-46ad-9dd0-5d4aeac52944",
                 "resourcePath": "objects\\oTime\\oTime.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c9cdb936-a095-4ef5-bcae-0a7ce9de6a25",
+            "Value": {
+                "id": "0100f85a-004c-45f6-8591-b1497ad59b6c",
+                "resourcePath": "views\\c9cdb936-a095-4ef5-bcae-0a7ce9de6a25.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ca494f91-4d37-4568-80ae-48af828504c8",
+            "Value": {
+                "id": "50deaee0-4139-44e4-9784-900510e0be2a",
+                "resourcePath": "sprites\\sTreeTrunk\\sTreeTrunk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -523,6 +555,14 @@
             "Value": {
                 "id": "4e82a54e-59e9-4732-838f-a28e5c68e402",
                 "resourcePath": "sprites\\sPlayerLegs\\sPlayerLegs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e78fc6a1-fe12-4c43-904d-ea8922387051",
+            "Value": {
+                "id": "bd69ba42-d4c2-495a-8463-d770ead38380",
+                "resourcePath": "sprites\\sTreeTop\\sTreeTop.yy",
                 "resourceType": "GMSprite"
             }
         },

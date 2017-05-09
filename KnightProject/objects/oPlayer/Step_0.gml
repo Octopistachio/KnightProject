@@ -4,13 +4,13 @@ image_angle = point_direction(x,y,mouse_x,mouse_y);
 vspeed=0;
 hspeed=0;
 
-if keyboard_check(ord("W"))
+if keyboard_check(ord("W")) && place_free(x,y-moveSpeed)
     vspeed = -moveSpeed;
-if keyboard_check(ord("S"))
+if keyboard_check(ord("S")) && place_free(x,y+moveSpeed)
     vspeed = moveSpeed;
-if keyboard_check(ord("A"))
+if keyboard_check(ord("A")) && place_free(x-moveSpeed,y)
     hspeed = -moveSpeed;
-if keyboard_check(ord("D"))
+if keyboard_check(ord("D")) && place_free(x+moveSpeed,y)
     hspeed = moveSpeed;
 
 //Outside Border

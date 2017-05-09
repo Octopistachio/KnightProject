@@ -17,5 +17,6 @@ if(keyboard_check(ord("P")))
 		
     draw_text(64,64+margin*3,string_hash_to_newline("Player's Coordinates: (" + string(round(oPlayer.x)) + ", " + string(round(oPlayer.y))) + ")");
 	
-	draw_text(64,64+margin*4,string_hash_to_newline("FPS: " + string(pritespeed_framespersecond)));
+	draw_text(64,64+margin*4,string_hash_to_newline("FPS: " + string(round(fps_real))));
+	
 }

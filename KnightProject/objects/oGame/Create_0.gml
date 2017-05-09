@@ -18,7 +18,7 @@ numberOfTrees = random_range(1000, 2000);
 
 
 /* Layers */
-layer_create(-999, "GUI");
+layer_create(-999, "Above");
 layer_create(999, "Background");
 layer_create(0, "Foreground");
 

@@ -20,16 +20,14 @@ if (mouse_check_button_pressed(mb_left) && !onSwingCoolDown){
 
 //Keep swinging left/right until desired angle is hit
 if(wasClicked){
-    if(!position_meeting(x,y,oCastleWall)){
-        if(side == left){
-            if(sideStep<left)
-                sideStep += sideVarition;
-        }
-        else{
-            if(sideStep>right)
-                sideStep -= sideVarition;
-        }
-    }        
+    if(side == left){
+        if(sideStep<left)
+            sideStep += sideVarition;
+    }
+    else{
+        if(sideStep>right)
+            sideStep -= sideVarition;
+    }       
 }
 
 //If desired angle is hit, stop swinging and enable cooldown

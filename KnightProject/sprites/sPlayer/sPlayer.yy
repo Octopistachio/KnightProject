@@ -6,11 +6,11 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 127,
-    "bbox_left": 0,
-    "bbox_right": 127,
-    "bbox_top": 0,
-    "bboxmode": 0,
+    "bbox_bottom": 112,
+    "bbox_left": 16,
+    "bbox_right": 119,
+    "bbox_top": 11,
+    "bboxmode": 2,
     "colkind": 2,
     "coltolerance": 0,
     "frames": [
@@ -53,7 +53,7 @@
             "visible": true
         }
     ],
-    "origin": 0,
+    "origin": 4,
     "playbackSpeed": 1,
     "playbackSpeedType": 1,
     "sepmasks": false,

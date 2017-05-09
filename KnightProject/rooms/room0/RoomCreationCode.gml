@@ -1,1 +1,1 @@
-random_get_seed();
+randomize();

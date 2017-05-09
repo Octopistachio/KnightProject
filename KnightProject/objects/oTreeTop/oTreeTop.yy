@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oTreeTop",
     "eventList": [
-        
+        {
+            "id": "28412cb9-29d5-4316-a193-d379787e5a09",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "8a5c7ff0-eee6-4a6f-858c-2a47189604aa"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "00000000-0000-0000-0000-000000000000",

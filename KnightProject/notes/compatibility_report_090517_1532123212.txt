@@ -1,0 +1,43 @@
+Converting GML script : ${project_dir}\scripts\draw_shadow\draw_shadow.gml
+Converted description : /// @description draw_shadow(shadow length, shadow direction, shadow color, shadow alpha); /// @function draw_shadow
+/// @param shadow length
+/// @param  shadow direction
+/// @param  shadow color
+/// @param  shadow alpha
+
+Converting GML script : ${project_dir}\scripts\draw_sprite_shadow\draw_sprite_shadow.gml
+Converted description : /// @description draw_sprite_shadow(sprite, subimg, x, y, shadow length, shadow direction, shadow color, shadow alpha);/// @function draw_sprite_shadow
+/// @param sprite
+/// @param  subimg
+/// @param  x
+/// @param  y
+/// @param  shadow length
+/// @param  shadow direction
+/// @param  shadow color
+/// @param  shadow alpha
+
+Converting GML script : ${project_dir}\scripts\draw_sprite_ext_shadow\draw_sprite_ext_shadow.gml
+Converted description : /// @description draw_sprite_ext_shadow(sprite, subimg, x, y, xscale, yscale, rot, color, alpha, shadow length, shadow direction, shadow color, shadow alpha);/// @function draw_sprite_ext_shadow
+/// @param sprite
+/// @param  subimg
+/// @param  x
+/// @param  y
+/// @param  xscale
+/// @param  yscale
+/// @param  rot
+/// @param  color
+/// @param  alpha
+/// @param  shadow length
+/// @param  shadow direction
+/// @param  shadow color
+/// @param  shadow alpha
+
+Converting GML script : ${project_dir}\scripts\draw_shadow_ext\draw_shadow_ext.gml
+Converted description : /// @description draw_shadow_ext(shadow length, shadow direction, shadow xscale, shadow yscale, shadow angle, shadow color,  shadow alpha); /// @function draw_shadow_ext
+/// @param shadow length
+/// @param  shadow direction
+/// @param  shadow xscale
+/// @param  shadow yscale
+/// @param  shadow angle
+/// @param  shadow color
+/// @param   shadow alpha

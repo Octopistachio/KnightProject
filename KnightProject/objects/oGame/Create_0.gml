@@ -15,7 +15,7 @@ numberOfCastleTiles = 16; //Number of tiles wide the castle should be
 
 numberOfTrees = random_range(1000, 2000);
 
-
+guiAlpha = .8;
 
 /* Layers */
 layer_create(-999, "Above");
@@ -56,6 +56,11 @@ for(var i=0; i<numberOfTrees; i++)
 
 	var rand_x = random_range(0,room_width);
 	var rand_y = random_range(0,room_height);
-	instance_create(rand_x, rand_y, oTreeTop);
-	instance_create(rand_x, rand_y, oTreeTrunk);
+	
+	if(place_empty(rand_x, rand_y))
+	{
+		instance_create(rand_x, rand_y, oTreeTop);
+		instance_create(rand_x, rand_y, oTreeTrunk);
+	}
+		
 }

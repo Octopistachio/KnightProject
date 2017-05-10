@@ -1,38 +1,38 @@
 {
-    "id": "c6926bee-1529-4de5-815b-5793595c17b5",
+    "id": "2482cf54-be90-4cf4-bc8e-eecdbc7a4cfa",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oTime",
+    "name": "oShadows",
     "eventList": [
         {
-            "id": "9d2c67b8-aa7e-4fca-aedd-18b8d01c4ca6",
+            "id": "d245e47b-156a-4d85-a37c-52cbde5c5576",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "2482cf54-be90-4cf4-bc8e-eecdbc7a4cfa"
+        },
+        {
+            "id": "1b4074e8-0718-409b-924a-44f5d00ebc12",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "c6926bee-1529-4de5-815b-5793595c17b5"
+            "m_owner": "2482cf54-be90-4cf4-bc8e-eecdbc7a4cfa"
         },
         {
-            "id": "074b1dd5-2a6d-4e7a-86f6-8e5c914869d7",
+            "id": "acc0eae2-f3f5-4959-9c06-7d3efd4360b0",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "c6926bee-1529-4de5-815b-5793595c17b5"
-        },
-        {
-            "id": "f7041dfb-d041-4dec-a253-f14a0bfcca8c",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 73,
-            "eventtype": 8,
-            "m_owner": "c6926bee-1529-4de5-815b-5793595c17b5"
+            "m_owner": "2482cf54-be90-4cf4-bc8e-eecdbc7a4cfa"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -47,10 +47,8 @@
     "physicsObject": false,
     "physicsRestitution": 0.1,
     "physicsSensor": false,
-    "physicsShape": 0,
-    "physicsShapePoints": [
-        
-    ],
+    "physicsShape": 1,
+    "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",

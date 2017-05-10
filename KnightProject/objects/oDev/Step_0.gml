@@ -1,11 +1,11 @@
 if(keyboard_check_pressed(ord("B")))
 {
-	global.time = 0;
+	global.time = oTime.totalDaylightCycle+1;
 }
 
 if(keyboard_check_pressed(ord("N")))
 {
-	global.time = global.dayEnd;
+	global.time = oTime.dayLength;
 }
 
 if(keyboard_check_pressed(ord("O")))

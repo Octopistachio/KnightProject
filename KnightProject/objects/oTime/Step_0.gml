@@ -1,11 +1,16 @@
-if(global.time<global.dayEnd){
-    global.time++;
-    global.isDay = true;
-}
-if (global.time>=global.nightEnd && global.time<=global.nightEnd+global.dayEnd){
-    global.isDay = false;
-    global.time++;
-}
-if(global.time>global.nightEnd+global.dayEnd)
-    global.time = 0;
+global.time++;
 
+if(global.time<=dayLength){
+    isDay = true;
+}
+else{
+    isDay = false;
+    nightOverlayAlpha += maxNightOverlayAlpha/nightLength;
+
+}
+
+if(global.time>totalDaylightCycle)
+{
+    global.time = -1;
+	nightOverlayAlpha = 0;
+}

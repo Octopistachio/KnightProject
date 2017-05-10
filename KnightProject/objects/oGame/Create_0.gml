@@ -50,17 +50,31 @@ for(var i = 0; i < numberOfCastleTiles; i++) //Top Left to Bottom Left
 //Spawn player in the center of the castle
 instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2) + castleTileSize/2, oCastleWallTopRight.y + (castleTileSize * numberOfCastleTiles/2) - castleTileSize/2, oPlayer);
 
-/* Tree Spawn */
-for(var i=0; i<numberOfTrees; i++)
-{
+//Spawn king in the center of the castle
+instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2) + castleTileSize/2, oCastleWallTopRight.y + (castleTileSize * numberOfCastleTiles/2) - castleTileSize/2, oKing);
 
-	var rand_x = random_range(0,room_width);
-	var rand_y = random_range(0,room_height);
+//Spawn an enemy to the left of the castle
+instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2) + castleTileSize/2 + 600, oCastleWallTopRight.y + (castleTileSize * numberOfCastleTiles/2) - castleTileSize/2, oEnemy);
+
+/* Tree Spawn */
+//for(var i=0; i<numberOfTrees; i++)
+//{
+
+//	var rand_x = random_range(0,room_width);
+//	var rand_y = random_range(0,room_height);
 	
-	if(place_empty(rand_x, rand_y))
-	{
-		instance_create(rand_x, rand_y, oTreeTop);
-		instance_create(rand_x, rand_y, oTreeTrunk);
-	}
+//	if(place_empty(rand_x, rand_y))
+//	{
+//		instance_create(rand_x, rand_y, oTreeTop);
+//		instance_create(rand_x, rand_y, oTreeTrunk);
+//	}
 		
-}
+//}
+
+/* Pathing */
+global.AI_grid = mp_grid_create(0,0, room_width/64, room_height/64, 128, 128);
+global.path = path_add();
+
+mp_grid_add_instances(global.AI_grid, oCastleWall, false);
+
+scr_Define_Path(1,1);

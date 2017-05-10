@@ -1,4 +1,4 @@
-/// @description draw_sprite_shadow(sprite, subimg, x, y, shadow length, shadow direction, shadow color, shadow alpha);
+/// @description draw_sprite_shadow(sprite, subimg, x, y, shadow_length, shadow_direction, shadow_color, shadow_alpha);
 /// @function draw_sprite_shadow
 /// @param sprite
 /// @param subimg

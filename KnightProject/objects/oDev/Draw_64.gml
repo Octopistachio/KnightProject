@@ -20,4 +20,5 @@ if(keyboard_check(ord("P")))
 	
 	draw_text(64,64+margin*4,string_hash_to_newline("FPS: " + string(round(fps_real))));
 	
+	
 }

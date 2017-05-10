@@ -5,7 +5,10 @@ if(global.time<=dayLength){
 }
 else{
     isDay = false;
-    nightOverlayAlpha += maxNightOverlayAlpha/nightLength;
+	if(global.time<=totalDaylightCycle-nightLength/2)
+		nightOverlayAlpha += maxNightOverlayAlpha/nightLength*2;
+	else
+		nightOverlayAlpha -= maxNightOverlayAlpha/nightLength*2;
 
 }
 

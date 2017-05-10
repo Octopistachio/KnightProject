@@ -1,7 +1,8 @@
 
-if(global.time>oTime.totalDaylightCycle)
+if(global.time == 0 || global.time == oTime.totalDaylightCycle)
      shadowDirection = 0;
-else if (global.time==oTime.dayLength+1)
+else if (global.time==oTime.dayLength)
 	shadowDirection = 270;
-else
-	shadowDirection += 360/oTime.totalDaylightCycle
+
+shadowDirection += 360/(oTime.totalDaylightCycle);
+

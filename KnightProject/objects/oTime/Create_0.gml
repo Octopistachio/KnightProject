@@ -1,7 +1,7 @@
 //Day is 5 minutes
 //Night is 2.5 minutes
 
-dayMinutes = .1;
+dayMinutes = 1;
 nightMinutes = dayMinutes/2;
 
 dayLength = (dayMinutes*60)*room_speed;

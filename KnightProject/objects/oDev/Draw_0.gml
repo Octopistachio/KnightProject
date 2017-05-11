@@ -32,4 +32,4 @@ if(gridEnabled)
 	}
 	
 if(pathEnabled)
-	draw_path(oEnemy.pathEnemy, x, y, true);
+	draw_path(global.path, x, y, true);

@@ -13,7 +13,8 @@
         "b1ea566d-efdf-4797-853e-40709774ce3a",
         "3308d5e3-b573-43bc-ba84-cd0b4de1b9ab",
         "cd649297-5034-41a0-afd3-375dd1df06a5",
-        "d4c220f8-dad0-4c3f-ac01-9a574d62dd1d"
+        "d4c220f8-dad0-4c3f-ac01-9a574d62dd1d",
+        "34ad0643-0342-4f93-90e3-89f4590b744d"
     ],
     "layers": [
         {
@@ -158,6 +159,30 @@
                     "rotation": 0,
                     "scaleX": 1,
                     "scaleY": 1
+                },
+                {
+                    "id": "34ad0643-0342-4f93-90e3-89f4590b744d",
+                    "modelName": "GMRInstance",
+                    "mvc": "1.0",
+                    "ignore": false,
+                    "inheritItemSettings": false,
+                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "name": "inst_1C9B2EC5",
+                    "x": 30656,
+                    "y": 33376,
+                    "IsDnD": false,
+                    "colour": {
+                        "Value": 4294967295
+                    },
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_1C9B2EC5",
+                    "objId": "d42c7133-35a4-45b7-ba44-67bb4053d32e",
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
                 }
             ]
         },
@@ -225,7 +250,7 @@
         "mvc": "1.0",
         "clearDisplayBuffer": true,
         "clearViewBackground": false,
-        "enableViews": false,
+        "enableViews": true,
         "inheritViewSettings": false
     },
     "views": [
@@ -234,16 +259,16 @@
             "modelName": "GMRView",
             "mvc": "1.0",
             "hborder": 500,
-            "hport": 760,
+            "hport": 480,
             "hspeed": -1,
-            "hview": 760,
+            "hview": 480,
             "inherit": false,
             "objId": "f8687414-cbab-4eea-b9e8-811781800f86",
             "vborder": 500,
             "visible": true,
             "vspeed": -1,
-            "wport": 1280,
-            "wview": 1280,
+            "wport": 640,
+            "wview": 640,
             "xport": 0,
             "xview": 0,
             "yport": 0,

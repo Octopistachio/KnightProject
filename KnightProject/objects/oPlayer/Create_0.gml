@@ -14,14 +14,9 @@ view_set_camera(0, camera);
 zoom_level = 1;
 
 rate = 0.05; //Set the rate of the zoom
-rateScrolling = 0.5; //Set the rate of the zoom when scrolling the mouse wheel
-zoom_max = 2.5;
 
 //Get the starting view size to be used for interpolation later
 default_zoom_width = camera_get_view_width(view_camera[0]);
 default_zoom_height = camera_get_view_height(view_camera[0]);
-
-castleJustEntered = true;
-castleJustExited = false;
 
 

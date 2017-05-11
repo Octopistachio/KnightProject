@@ -32,23 +32,13 @@ if(instance_exists(oCastleWallBottomLeft) && instance_exists(oCastleWallTopRight
     y > oCastleWallTopRight.y)
 	{
 		global.playerInsideCastle = true;
-		castleJustEntered = true;
 	}
 	else
 	{
 		global.playerInsideCastle = false;
-		castleJustExited = true;
 		
 	}
 }
-
-if(castleJustEntered)
-	castleJustEntered = false;
-
-if(castleJustExited)
-	castleJustExited = false;
-	
-
 
 /* Player Camera */
 //Get current size
@@ -66,21 +56,16 @@ camera_set_view_size(view_camera[0], new_w, new_h);
 var shift_x = camera_get_view_x(view_camera[0]) - (new_w - view_w) * 0.5;
 var shift_y = camera_get_view_y(view_camera[0]) - (new_h - view_h) * 0.5;
 
-//Scrolling
-if(castleJustEntered)
-{
-	zoom_level = 1;
-}
-else if(castleJustExited)
-{
-	zoom_level = 1.5;
-}
-else
-{
-	//Move the zoom level based on mouse scrolling. Clamp the value so stuff doesn't get too silly
-	zoom_level = clamp(zoom_level + (((mouse_wheel_down() - mouse_wheel_up())) * rateScrolling), 1, zoom_max);	
-}
-
 //Update the view position
 camera_set_view_pos(view_camera[0],shift_x, shift_y);
+
+
+if(global.playerInsideCastle)
+	zoom_level = 1;
+else
+	zoom_level = 1.5;
+
+//Move the zoom level based on mouse scrolling. Clamp the value so stuff doesn't get too silly
+//zoom_level = clamp(zoom_level + (((mouse_wheel_down() - mouse_wheel_up())) * rateScrolling), 1, zoom_max);	
+
 

@@ -455,6 +455,14 @@
             }
         },
         {
+            "Key": "ac968084-dc84-48e2-8a46-6b9ffdd542e0",
+            "Value": {
+                "id": "e6ab62e8-e106-4e1d-aa39-d9e7058ce59b",
+                "resourcePath": "objects\\oWorldGeneration\\oWorldGeneration.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ae1523c1-f5a0-4027-a608-7fc88ac718e6",
             "Value": {
                 "id": "80f8cbc9-a8bb-4366-acc6-38260f7249be",

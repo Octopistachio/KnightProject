@@ -1,4 +1,4 @@
-/// @description draw_shadow(shadow length, shadow direction, shadow color, shadow alpha); 
+/// @description draw_shadow(shadow_length, shadow_direction, shadow_color, shadow_alpha); 
 /// @function draw_shadow
 /// @param shadow_length
 /// @param shadow_direction

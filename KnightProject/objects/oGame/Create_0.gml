@@ -17,6 +17,8 @@ numberOfTrees = random_range(1000, 2000);
 
 guiAlpha = .8;
 
+cellSize = 32;
+
 /* Layers */
 layer_create(-999, "Above");
 layer_create(999, "Background");
@@ -53,15 +55,13 @@ instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2)
 //Spawn king in the center of the castle
 instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2) + castleTileSize/2, oCastleWallTopRight.y + (castleTileSize * numberOfCastleTiles/2) - castleTileSize/2, oKing);
 
-//Spawn an enemy to the left of the castle
-instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2) + castleTileSize/2 + 600, oCastleWallTopRight.y + (castleTileSize * numberOfCastleTiles/2) - castleTileSize/2, oEnemy);
-
 /* Tree Spawn */
 //for(var i=0; i<numberOfTrees; i++)
 //{
 
 //	var rand_x = random_range(0,room_width);
 //	var rand_y = random_range(0,room_height);
+	
 	
 //	if(place_empty(rand_x, rand_y))
 //	{
@@ -71,10 +71,36 @@ instance_create(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTiles/2)
 		
 //}
 
+for(var i=0; i<numberOfTrees; i++)
+{
+	var rand_x = random_range(0,room_width);
+	var rand_y = random_range(0,room_height);
+
+	if place_free(rand_x, rand_y)
+	   {
+	      instance_create(rand_x, rand_y, oTreeTop);
+		  instance_create(rand_x, rand_y, oTreeTrunk);
+	   }
+	else if !place_free(rand_x, rand_y)
+	   {
+	     do
+	       {
+	          rand_x = random_range(0,room_width);
+	          rand_y = random_range(0,room_height);
+	       }
+	     until (place_free(rand_x, rand_y));
+
+			instance_create(rand_x, rand_y, oTreeTop);
+			instance_create(rand_x, rand_y, oTreeTrunk);
+		}
+	   
+}
+
 /* Pathing */
-global.AI_grid = mp_grid_create(0,0, room_width/64, room_height/64, 128, 128);
+global.AI_grid = mp_grid_create(0,0, room_width/cellSize, room_height/cellSize, cellSize, cellSize);
 global.path = path_add();
 
 mp_grid_add_instances(global.AI_grid, oCastleWall, false);
+mp_grid_add_instances(global.AI_grid, oTreeTrunk, false);
 
-scr_Define_Path(1,1);
+scr_Define_Path(oEnemy,oKing);

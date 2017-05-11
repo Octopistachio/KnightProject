@@ -9,3 +9,9 @@ wasClicked = false;
 
 onSwingCoolDown = false;
 swingCoolDownTime = 25;
+
+/* Blood Splatter */
+deadEnemyX = 0;
+deadEnemyY = 0;
+particleBloodMaxAmount = 15;
+particleBloodMaxOriginDeviation = 25; //Max distance away from where the enemy died

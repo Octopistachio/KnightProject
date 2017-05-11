@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "a3ff1638-5423-47c8-b05e-3df8722e6982",
+            "Value": {
+                "id": "8fd4a89d-0c46-4ecc-9b31-bd5f7e23328e",
+                "resourcePath": "views\\a3ff1638-5423-47c8-b05e-3df8722e6982.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a482868d-bd55-41d4-bddf-9c084ce1d771",
             "Value": {
                 "id": "96dd3f84-3fe2-4b8b-88ce-cb5bcc97c84d",
@@ -444,6 +452,14 @@
                 "id": "19d63961-1d71-48ea-a744-dd955035cd48",
                 "resourcePath": "sounds\\aHit\\aHit.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "ae1523c1-f5a0-4027-a608-7fc88ac718e6",
+            "Value": {
+                "id": "80f8cbc9-a8bb-4366-acc6-38260f7249be",
+                "resourcePath": "sprites\\sParticleBlood\\sParticleBlood.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -524,6 +540,14 @@
                 "id": "50deaee0-4139-44e4-9784-900510e0be2a",
                 "resourcePath": "sprites\\sTreeTrunk\\sTreeTrunk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cc5c1c69-26da-4185-ab5a-17c2f095fc50",
+            "Value": {
+                "id": "f8ca873b-3c26-4b1a-8e24-71b0120f773c",
+                "resourcePath": "objects\\oParticleBlood\\oParticleBlood.yy",
+                "resourceType": "GMObject"
             }
         },
         {

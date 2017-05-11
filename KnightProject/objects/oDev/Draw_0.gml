@@ -1,15 +1,35 @@
 /* Grid */
-if(keyboard_check(ord("G")))
+if(consoleEnabled)
 {
-	draw_set_alpha(.5);
+	if(keyboard_check_pressed(ord("G")))
+	{
+		if(!gridEnabled)
+			gridEnabled = true;
+		else
+			gridEnabled = false;
+	}
 	
-	mp_grid_draw(global.AI_grid);
-	
-	for(var i = 0; i < room_width; i += 128)
-		draw_line(i, 0, i, room_height);
-	for(var i = 0; i < room_height; i += 128)
-		draw_line(0, i, room_width, i);
+	if(keyboard_check_pressed(ord("H")))
+	{
+		if(!pathEnabled)
+			pathEnabled = true;
+		else
+			pathEnabled = false;
+	}
 		
-	draw_path(global.path, x, y, true);
-
 }
+
+if(gridEnabled)
+	{
+		draw_set_alpha(.5);
+	
+		mp_grid_draw(global.AI_grid);
+	
+		for(var i = 0; i < room_width; i += oGame.cellSize)
+			draw_line(i, 0, i, room_height);
+		for(var i = 0; i < room_height; i += oGame.cellSize)
+			draw_line(0, i, room_width, i);
+	}
+	
+if(pathEnabled)
+	draw_path(global.path, x, y, true);

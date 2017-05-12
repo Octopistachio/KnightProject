@@ -16,7 +16,7 @@ var path = argument4;
 
 if !mp_grid_path(global.AI_grid, path, start_x, start_y, finish_x, finish_y, true)
 {
-	show_message("NO PATH!");
+	//show_message("NO PATH!");
 	return false;
 }
 else

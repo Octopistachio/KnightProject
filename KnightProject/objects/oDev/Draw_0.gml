@@ -16,6 +16,14 @@ if(consoleEnabled)
 		else
 			pathEnabled = false;
 	}
+	
+	if(keyboard_check_pressed(ord("V")))
+	{
+		if(!creationGridEnabled)
+			creationGridEnabled = true;
+		else
+			creationGridEnabled = false;
+	}
 		
 }
 
@@ -33,3 +41,15 @@ if(gridEnabled)
 	
 if(pathEnabled)
 	draw_path(oEnemy.pathEnemy, x, y, true);
+	
+if(creationGridEnabled)
+{
+	for(var i = 0; i<array_height_2d(oWorldGeneration.creationCellTopRight_x); i++)
+	{
+		for(var j = 0; j<array_length_2d(oWorldGeneration.creationCellTopRight_x, i); j++)
+			{
+				draw_rectangle(oWorldGeneration.creationCellTopRight_x[i,j], oWorldGeneration.creationCellTopRight_y[i,j],oWorldGeneration.creationCellBottomLeft_x[i,j],oWorldGeneration.creationCellBottomLeft_y[i,j],true)
+				
+			}
+	}
+}

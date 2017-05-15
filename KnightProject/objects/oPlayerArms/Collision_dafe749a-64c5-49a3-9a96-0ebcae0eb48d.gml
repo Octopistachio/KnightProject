@@ -12,7 +12,7 @@ audio_play_sound(aHit,1,false)
 	{
 		var xx = deadEnemyX + random_range(-particleBloodMaxOriginDeviation, particleBloodMaxOriginDeviation);
 		var yy = deadEnemyY + random_range(-particleBloodMaxOriginDeviation, particleBloodMaxOriginDeviation);
-		particleBloodInstance = instance_create(xx, yy, oParticleBlood);
+		particleBloodInstance = instance_create_depth(xx, yy, 0, oParticleBlood);
 	}
 	
 

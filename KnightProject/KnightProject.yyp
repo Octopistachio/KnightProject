@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "24706176-0f11-4d93-be07-c9300e117f5b",
+            "Value": {
+                "id": "78386257-542d-4fe0-a08b-9eb4d6a43827",
+                "resourcePath": "scripts\\TerrainSpawn\\TerrainSpawn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2482cf54-be90-4cf4-bc8e-eecdbc7a4cfa",
             "Value": {
                 "id": "a99d24ed-d90c-47bc-99fa-75a16824eff7",
@@ -204,6 +212,14 @@
                 "id": "7430121d-a1b6-4757-86ff-65379efc0d37",
                 "resourcePath": "tilesets\\bGrass_tileset\\bGrass_tileset.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "556fd2f6-ca2e-4438-b0b5-e23449ab640f",
+            "Value": {
+                "id": "274e87a9-0699-4237-a71a-d6b58d30dcc5",
+                "resourcePath": "scripts\\array\\array.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -383,6 +399,14 @@
             }
         },
         {
+            "Key": "9ea530e6-c2e3-483e-b3ca-89bc719291cd",
+            "Value": {
+                "id": "98ffe730-1098-4b56-b1cd-1fcac731e09b",
+                "resourcePath": "scripts\\CreateTerrain\\CreateTerrain.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a032c309-7b0d-404f-9b1f-d834cff3b1dd",
             "Value": {
                 "id": "4556e03c-caf4-43b4-a6db-4fd6af48d323",
@@ -500,6 +524,14 @@
                 "id": "4dbb8f00-a909-49bc-8f1a-04532ba3b791",
                 "resourcePath": "sprites\\sCursor\\sCursor.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c0a33a22-9799-446a-b14d-c38e334117c1",
+            "Value": {
+                "id": "4560bf1e-504e-4696-a932-a12bb42050ae",
+                "resourcePath": "datafiles_yy\\Debugger.xml.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -745,7 +777,10 @@
         "885a56eb-a7f3-40e2-a362-dcdd508288cd",
         "b03d5553-7486-47f9-b7fc-feec5a840e34",
         "94c453a7-45c5-49f7-8bcc-546462f6f257",
-        "448956f6-fde4-462c-a6cc-51f340c187cc"
+        "448956f6-fde4-462c-a6cc-51f340c187cc",
+        "24706176-0f11-4d93-be07-c9300e117f5b",
+        "556fd2f6-ca2e-4438-b0b5-e23449ab640f",
+        "9ea530e6-c2e3-483e-b3ca-89bc719291cd"
     ],
     "tutorial": ""
 }

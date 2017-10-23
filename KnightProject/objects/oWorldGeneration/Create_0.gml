@@ -1,12 +1,12 @@
 /* Variables */
-topRightWallRandom_x = round(random_range(10000,40000));
-topRightWallRandom_y = round(random_range(10000,40000));
-
 castleTileSize = sprite_get_width(oCastleWallTopRight); //Size of the castle's tiles
 numberOfCastleTiles = 16; //Number of tiles wide the castle should be
 
-minNumberOfTrees = 1;
-maxNumberOfTrees = 2;
+topRightWallRandom_x = round(random_range(castleTileSize*numberOfCastleTiles,room_width - castleTileSize*numberOfCastleTiles));
+topRightWallRandom_y = round(random_range(castleTileSize*numberOfCastleTiles,room_height - castleTileSize*numberOfCastleTiles));
+
+minNumberOfTrees = 2;
+maxNumberOfTrees = 5;
 
 /* Castle Spawn */
 instance_create_depth(topRightWallRandom_x,topRightWallRandom_x,0,oCastleWallTopRight); //Spawn top right corner
@@ -41,8 +41,8 @@ instance_create_depth(oCastleWallTopRight.x - (castleTileSize * numberOfCastleTi
 /* Creation Grid */
 creationCellSize = 1024; //The size of one creation cell
 
-creationCellAllWidth = room_width/creationCellSize; //The number of creation cells wide the room is
-creationCellAllHeight = room_width/creationCellSize; //The number of creation cells high the room is
+creationCellAllWidth = round(room_width/creationCellSize); //The number of creation cells wide the room is
+creationCellAllHeight = round(room_width/creationCellSize); //The number of creation cells high the room is
 
 creationDSGrid = ds_grid_create(creationCellAllWidth, creationCellAllHeight);
 
@@ -57,58 +57,29 @@ creationCellBottomLeft_y = [];
 old_oPlayer_cell_column = 0;
 old_oPlayer_cell_row = 0;
 
+oPlayer_cell_column = 0;
+oPlayer_cell_row = 0;
+
 
 //The coordinates of the trees
-oTreeTrunk_x = [];
-oTreeTrunk_y = [];
-oTreeTrunk_cell_row = [];
-oTreeTrunk_cell_column = [];
+oTreeTrunk_cell_x = ds_grid_create(creationCellAllWidth, creationCellAllHeight); //Array of oTreeTrunk_x's
+oTreeTrunk_cell_y = ds_grid_create(creationCellAllWidth, creationCellAllHeight); //Array of oTreeTrunk_y's
+oTreeTrunk_cell_amount = ds_grid_create(creationCellAllWidth, creationCellAllHeight); //Amount of trees in the current cell
 
-for(var i = 0; i < creationCellAllHeight; i++)
-{
-	for(var j = 0; j < creationCellAllWidth; j++)
+for(var i = 0; i < creationCellAllHeight; i++) //For every column
+	for(var j = 0; j < creationCellAllWidth; j++) //For every row
 		{
-					
-			creationCellTopRight_x[i,j] = creationCellSize * (j+1);
-			creationCellTopRight_y[i,j] = creationCellSize * (i+1);
+
+			creationCellTopRight_x[i,j] = creationCellSize * (j+1); //Make the top right x of the cell to the width * the row + 1
+			creationCellTopRight_y[i,j] = creationCellSize * (i+1); //Make the top right y of the cell to the width * the column + 1
 			
-			creationCellBottomLeft_x[i,j] = creationCellSize * j;
-			creationCellBottomLeft_y[i,j] = creationCellSize * i;	
-				
+			creationCellBottomLeft_x[i,j] = creationCellSize * j; //Make the bottom left x of the cell to the width * the row
+			creationCellBottomLeft_y[i,j] = creationCellSize * i; //Make the bottom left y of the cell to the width * the column
 			
 		}
-}
 
-
-/* Pick Terrain Coordinates */
-for(var i = 0; i < creationCellAllHeight; i++)
-{
-	for(var j = 0; j < creationCellAllWidth; j++)
-	{
-		/* Tree Spawn */
-			
-		var treesToCreate = round(random_range(minNumberOfTrees, maxNumberOfTrees));
-		for(var k = 0; k<treesToCreate; k++)
-		{
-			var rand_x = random_range(creationCellBottomLeft_x[i,j],creationCellTopRight_x[i,j]);
-			var rand_y = random_range(creationCellBottomLeft_y[i,j],creationCellTopRight_y[i,j]);
-			
-			oTreeTrunk_x[i,j] = rand_x;
-			oTreeTrunk_y[i,j] = rand_y;
-			
-			oTreeTrunk_cell_column[i,j] = i;
-			oTreeTrunk_cell_row[i,j] = j;
-		}
-		
-		/*  */
-			
-	}
-		
-}
-
-for(var i = 0; i < creationCellAllHeight; i++)
-{
-	for(var j = 0; j < creationCellAllWidth; j++)
+for(var i = 0; i < creationCellAllWidth; i++)
+	for(var j = 0; j < creationCellAllHeight; j++)
 		{
 			if(oPlayer.x <= creationCellTopRight_x[i,j] && oPlayer.x >= creationCellBottomLeft_x[i,j] &&
 			   oPlayer.y <= creationCellTopRight_y[i,j] && oPlayer.y >= creationCellBottomLeft_y[i,j])
@@ -117,7 +88,18 @@ for(var i = 0; i < creationCellAllHeight; i++)
 				oPlayer_cell_row = j;
 			}
 		}
+		
+for(var i = 0; i < creationCellAllWidth; i++) //For every column
+{
+	for(var j = 0; j < creationCellAllHeight; j++) //For every row
+	{
+		var toCreate = round(random_range(minNumberOfTrees, maxNumberOfTrees)); //Randomize the number of objects to spawn
+		ds_grid_add(oTreeTrunk_cell_amount, i, j, toCreate);
+	}
 }
+
+oTreeTrunk_cell_x = CreateTerrain(oTreeTrunk_cell_amount, "x");
+oTreeTrunk_cell_y = CreateTerrain(oTreeTrunk_cell_amount, "y");
 
 old_oPlayer_cell_column = oPlayer_cell_column;
 old_oPlayer_cell_row = oPlayer_cell_row;

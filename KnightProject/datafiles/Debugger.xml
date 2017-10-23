@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ActiveConfig="default" Platform="Windows" Runtime="VM" Device="Default">
+	<Desktop x="-8" y="-8" width="1360" height="705" id="19" title="KnightProject - GameMaker Studio 2" windowState="Maximized">
+		<Workspaces>
+			<Workspace active="True" chain="True" title="Workspace 1" localise_title="Workspace_TabTitle" localise_arguments="[&#xD;&#xA;    &quot;1&quot;&#xD;&#xA;]" workspace_offset="[533, 148]" workspace_scale="1">
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="488dpi_px">
+						<Script column="0" file="${project_dir}\scripts\CreateTerrain\CreateTerrain.gml" resource="16ffd4e3-bd5c-4531-9ee3-88fbf2a60ef3" subResource="00000000-0000-0000-0000-000000000000" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="40dpi_px" top="1171dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectId="2482cf54-be90-4cf4-bc8e-eecdbc7a4cfa" objectName="oShadows" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" activeWindow="parent">
+						<WorkspaceChain left="40dpi_px" top="682dpi_px" />
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectId="ac968084-dc84-48e2-8a46-6b9ffdd542e0" objectName="oWorldGeneration" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" activeWindow="parent">
+						<WorkspaceChain left="40dpi_px" top="125dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="486dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\oWorldGeneration\Create_0.gml" resource="ac968084-dc84-48e2-8a46-6b9ffdd542e0" subResource="ae9b1451-498d-47ae-8566-a8751c1e144d" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\oWorldGeneration\Step_0.gml" resource="ac968084-dc84-48e2-8a46-6b9ffdd542e0" subResource="32b0a99d-0f0f-443b-a6a6-7f6e0d57bdf5" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="487dpi_px">
+								<Script column="0" file="${project_dir}\scripts\TerrainSpawn\TerrainSpawn.gml" resource="24706176-0f11-4d93-be07-c9300e117f5b" subResource="00000000-0000-0000-0000-000000000000" overridden_title="False" view_readonly="False" />
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+			</Workspace>
+		</Workspaces>
+		<Dock state="Expanded" type="eRight" restore_size="305dpi_px" active_tab="0">
+			<DockTab title="Resources" localise_title="ResourceTree_Title" cell_sizes="[832,167]" layout_id="dock_tab_1" layout_guid="b02985ad-9b97-4fb8-88f3-77c7c6a92d73">
+				<Module Command="open_resource_tree">
+					<ResourceWindow left="0px" right="" top="0px" bottom="" width="400px" height="600px" flags="CloseButton, ResizeButton" title="Resources" localise_title="ResourceTree_Title" active_view="Default" Scale="100" />
+				</Module>
+				<Module Command="open_recent_windows">
+					<RecentWindowsWindow left="" right="" top="" bottom="" width="400dpi_px" height="100dpi_px" flags="Default" title="Recent Windows" localise_title="recentwindows_title" />
+				</Module>
+			</DockTab>
+		</Dock>
+		<Dock state="Expanded" type="eBottom" restore_size="129.4dpi_px" active_tab="3">
+			<DockTab title="Search Results" localise_title="OutputPanel_SearchResults" cell_sizes="[1000]" layout_id="dock_tab_2" layout_guid="f6e3fc86-ce99-466f-a68a-5194b8565bf9">
+				<Module Command="open_search_output_panel">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Search Results" localise_title="OutputPanel_SearchResults" />
+				</Module>
+			</DockTab>
+			<DockTab title="Source Control" localise_title="OutputPanel_SourceControl" cell_sizes="[1000]" layout_id="dock_tab_3" layout_guid="8b272c98-df5a-48eb-a69f-e12415a9d4be">
+				<Module Command="open_sc_output_panel">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Source Control" localise_title="OutputPanel_SourceControl" />
+				</Module>
+			</DockTab>
+			<DockTab title="Breakpoints" localise_title="Breakpoints" cell_sizes="[1000]" layout_id="dock_tab_4" layout_guid="e27c4151-ecb5-4b42-be08-f8601e85f06e">
+				<Module Command="open_breakpoint_mgr">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Breakpoints" localise_title="Breakpoints" />
+				</Module>
+			</DockTab>
+			<DockTab title="Compile Errors" localise_title="CompileErrors" cell_sizes="[1000]" layout_id="dock_tab_5" layout_guid="5b6f441e-0745-424d-8342-c2e516855bb7">
+				<Module Command="show_compile_errors">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Compile Errors" localise_title="CompileErrors" />
+				</Module>
+			</DockTab>
+			<DockTab title="Syntax Errors" localise_title="SyntaxErrors" cell_sizes="[1000]" layout_id="dock_tab_6" layout_guid="1e1e6b91-d698-4705-a946-b725cb03272b">
+				<Module Command="show_syntax_errors">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Syntax Errors" localise_title="SyntaxErrors" />
+				</Module>
+			</DockTab>
+		</Dock>
+	</Desktop>
+	<Desktop x="1352" y="-264" width="1280" height="961" id="18" title="KnightProject" windowState="Maximized">
+		<Workspaces>
+			<Workspace active="False" chain="True" title="Workspace 1" localise_title="Workspace_TabTitle" localise_arguments="[&#xD;&#xA;    &quot;1&quot;&#xD;&#xA;]" workspace_offset="[0, 0]" workspace_scale="1" />
+		</Workspaces>
+		<Dock state="Expanded" type="eBottom" restore_size="180.6dpi_px" active_tab="4">
+			<DockTab title="Output" localise_title="OutputPanel_Title" cell_sizes="[1000]" layout_id="dock_tab_5" layout_guid="913076bc-9f11-4778-8ff8-7716d2bbdb6c">
+				<Module Command="open_output_panel">
+					<Window left="93px" right="" top="796px" bottom="" width="900dpi_px" height="240dpi_px" flags="Default" title="Output" localise_title="OutputPanel_Title" />
+				</Module>
+			</DockTab>
+		</Dock>
+	</Desktop>
+</Project>

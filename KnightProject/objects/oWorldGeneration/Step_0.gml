@@ -14,34 +14,10 @@ for(var i = 0; i < creationCellAllHeight; i++)
 }
 
 /* Spawn Terrain */
-	for(var i = 0; i < creationCellAllHeight; i++)
-	{
+TerrainSpawn(oTreeTrunk_cell_x, oTreeTrunk_cell_y, oTreeTrunk_cell_amount, oTreeTrunk, 0);
 		
-		
-		for(var j = 0; j < creationCellAllWidth; j++)
-		{
-			
-			
-			if(oPlayer_cell_column == oTreeTrunk_cell_column[i,j] && oPlayer_cell_row == oTreeTrunk_cell_row[i,j])
-			{
-				treeInstance = instance_create_depth(oTreeTrunk_x[i,j], oTreeTrunk_y[i,j], 0, oTreeTrunk)
-				show_debug_message("Tree was created!\nTree Instance: " + string(treeInstance));
-			}
-			
-			
-		}
-		
-	
-	}
-	
-	if(oPlayer_cell_column != old_oPlayer_cell_column || oPlayer_cell_column != old_oPlayer_cell_column)
-			with(treeInstance)
-			{
-				instance_destroy();
-			}
-		
-		old_oPlayer_cell_column = oPlayer_cell_column;
-		old_oPlayer_cell_row = oPlayer_cell_row;
+old_oPlayer_cell_column = oPlayer_cell_column;
+old_oPlayer_cell_row = oPlayer_cell_row;
 	
 
 

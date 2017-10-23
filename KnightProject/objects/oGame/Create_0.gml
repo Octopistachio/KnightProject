@@ -1,4 +1,4 @@
-audio_play_sound(aBackgroundMusic,1,true);
+//audio_play_sound(aBackgroundMusic,1,true);
 window_set_cursor(cr_none);
 
 /* Variables */

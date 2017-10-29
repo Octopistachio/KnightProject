@@ -62,9 +62,9 @@ oPlayer_cell_row = 0;
 
 
 //The coordinates of the trees
-oTreeTrunk_cell_x = ds_grid_create(creationCellAllWidth, creationCellAllHeight); //Array of oTreeTrunk_x's
-oTreeTrunk_cell_y = ds_grid_create(creationCellAllWidth, creationCellAllHeight); //Array of oTreeTrunk_y's
-oTreeTrunk_cell_amount = ds_grid_create(creationCellAllWidth, creationCellAllHeight); //Amount of trees in the current cell
+oTreeTrunk_cell_x = []; //Array of oTreeTrunk_x's
+oTreeTrunk_cell_y = []; //Array of oTreeTrunk_y's
+oTreeTrunk_cell_amount = []; //Amount of trees in the current cell
 
 for(var i = 0; i < creationCellAllHeight; i++) //For every column
 	for(var j = 0; j < creationCellAllWidth; j++) //For every row
@@ -94,12 +94,15 @@ for(var i = 0; i < creationCellAllWidth; i++) //For every column
 	for(var j = 0; j < creationCellAllHeight; j++) //For every row
 	{
 		var toCreate = round(random_range(minNumberOfTrees, maxNumberOfTrees)); //Randomize the number of objects to spawn
-		ds_grid_add(oTreeTrunk_cell_amount, i, j, toCreate);
+		oTreeTrunk_cell_amount[i, j] = toCreate;
 	}
 }
 
 oTreeTrunk_cell_x = CreateTerrain(oTreeTrunk_cell_amount, "x");
 oTreeTrunk_cell_y = CreateTerrain(oTreeTrunk_cell_amount, "y");
+
+OutputArray(oTreeTrunk_cell_x, "oTreeTrunk_cell_x", true);
+
 
 old_oPlayer_cell_column = oPlayer_cell_column;
 old_oPlayer_cell_row = oPlayer_cell_row;

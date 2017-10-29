@@ -33,13 +33,10 @@ if(row != old_row || col != old_col) //If the player is entering a new cell
 	//	string(instance));
 	//}
 	
-	object_x = ds_grid_get(object_cell_x, row, col); //Set object_x to the array of x's in object_cell_x[i,j]
-	object_y = ds_grid_get(object_cell_y, row, col); //Set object_y to the array of y's in object_cell_y[i,j]
-	
-	
-	show_debug_message(string(object_x));
+	object_x = object_cell_x[row, col]; //Set object_x to the array of x's in object_cell_x[i,j]
+	object_y = object_cell_x[row, col]; //Set object_y to the array of y's in object_cell_y[i,j]
 				
-	for(var i = 0; i < ds_grid_get(amount, row, col); i++) //For each object in the tile
+	for(var i = 0; i < amount[row, col]; i++) //For each object in the tile
 	{
 		instance = instance_create_depth(object_x[i], object_y[i], object_depth, object); //Create an instance
 		
@@ -47,7 +44,6 @@ if(row != old_row || col != old_col) //If the player is entering a new cell
 		" was created in square (" + string(row) + ", " + string(col) + ") Instance id: " + 
 		string(instance) + " x: " + string(object_x[i]) + " y: " + string(object_y[i]));
 	}
-	
-	show_debug_message("");
-	
+
+
 }

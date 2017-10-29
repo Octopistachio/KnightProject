@@ -3,15 +3,18 @@
 /// @param amount
 /// @param coord
 
+if(!is_array(argument0))
+	show_error("Amount must be an array!", true);
+
 amount = argument0;
 coord = argument1;
 
-var maxRow = array_height_2d(amount);
-var maxCol = array_length_2d(amount, 0);
+var maxRow = oWorldGeneration.creationCellAllWidth;
+var maxCol = oWorldGeneration.creationCellAllHeight;
 
 var leftBound, rightBound;
 
-var coordArray = ds_grid_create(maxRow, maxCol);
+var coordArray = [];
 var object_coord = [];
 
 if(coord == "x" || coord == "X")
@@ -41,8 +44,9 @@ for(var i = 0; i < maxRow; i++) //For every column
 			coord + " of " + string(object_coord[k]));
 				
 		}
-			
-		ds_grid_set(coordArray, i, j, object_coord);	
+		
+		coordArray[i, j] = object_coord;
+
 	}
 }
 
